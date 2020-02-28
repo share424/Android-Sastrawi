@@ -1,0 +1,3 @@
+rootProject.name='Android Sastrawi'
+include ':app'
+include ':androidsastrawi'
