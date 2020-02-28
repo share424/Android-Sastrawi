@@ -3,13 +3,12 @@ package com.share424.androidsastrawi.Dictionary
 class ArrayDictionary : DictionaryInterface {
     protected val words = HashMap<String, String>()
 
-    fun ArrayDictionary(words : MutableList<String>) {
-        if(words == null) {
+    constructor(words : MutableList<String>) {
+        if(words.isEmpty()) {
             addWords(mutableListOf())
-         } else {
+        } else {
             addWords(words)
         }
-
     }
 
     fun addWords(words: MutableList<String>) {
