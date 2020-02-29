@@ -58,7 +58,7 @@ val stemmerFromList = StemmerFactory(context)
                             .fromList(list)
                             .create()
 ```
-![Stemmer](https://github.com/share424/Android-Sastrawi/raw/master/images/stemmer.jpeg =100x50)
+<img src="https://github.com/share424/Android-Sastrawi/raw/master/images/stemmer.jpeg" alt="Stemmer" height="100" />
 ## Stop Word Remover
 ### Apa itu Stop Word?
 [Stop Words](https://en.wikipedia.org/wiki/Stop_words) adalah kumpulan kata yang akan dihilangkan sebelum dilakukan proses NLP.
