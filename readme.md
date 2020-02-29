@@ -1,6 +1,25 @@
+<p align="center">
+  <a href="https://jitpack.io/#share424/Android-Sastrawi"><img src="https://jitpack.io/v/share424/Android-Sastrawi.svg"/></a>
+  <a href="https://jitpack.io/#mukeshsolanki/MarkdownView-Android/"> <img src="https://jitpack.io/v/mukeshsolanki/MarkdownView-Android/month.svg" /></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg"/></a>
+</p>
 # Android Sastrawi
 Android Sastrawi is a Natural Language Processing Toolkit for Bahasa Indonesia. It is port from original [Sastrawi](https://github.com/sastrawi/sastrawi) project.
 
+# Instalasi
+Tambahkan repository jitpack pada file gradle anda
+```
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+}
+```
+Selanjutnya tambahkan depedency
+```
+implementation 'com.github.share424:Android-Sastrawi:Tag'
+```
 # Fitur
 ## Stemming
 ### Apa itu Stemming?
