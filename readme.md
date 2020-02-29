@@ -14,7 +14,7 @@ Android Sastrawi is a Natural Language Processing Toolkit for Bahasa Indonesia. 
 
 # Instalasi
 Tambahkan repository jitpack pada file gradle anda
-```
+```gradle
 allprojects {
 	repositories {
 		...
@@ -23,7 +23,7 @@ allprojects {
 }
 ```
 Selanjutnya tambahkan depedency
-```
+```gradle
 implementation 'com.github.share424:Android-Sastrawi:1.0.0'
 ```
 # Fitur
@@ -38,18 +38,18 @@ mengandai-andaikan => andai
 ```
 ### Cara Penggunaan
 Untuk membuat stemmer bisa menggunakan perintah berikut
-```
+```kotlin
 val stemmer = StemmerFactory(context).create()
 ```
 cara diatas akan menggunakan [kamus kata dasar bawaan](https://github.com/share424/Android-Sastrawi/raw/master/sastrawi/src/main/assets/kata_dasar.txt) dari [kateglo](http://kateglo.com/)
 
 Selanjutnya kita bisa langsung melakukan stemming dengan method `stem()`, seperti berikut
-```
+```kotlin
 val output = stemmer.stem("Perekonomian Indonesia sedang dalam pertumbuhan yang membanggakan")
 // output = ekonomi indonesia sedang dalam tumbuh yang bangga
 ```
 Jika ingin menggunakan kamus kata dasar sendiri, bisa menggunakan method `fromFile()` untuk dari file dan `fromList()` untuk dari `List<String>`. Contohnya seperti berikut
-```
+```kotlin
 // kamus kata dasar dari file txt
 // format file dipisah dengan enter tiap katanya
 val file = File("path to file.txt")
@@ -74,18 +74,18 @@ di, ke, yang, untuk, pada, ....
 ```
 ### Penggunaan
 Untuk membuat Stop Word Remover bisa menggunakan perintah berikut
-```
+```kotlin
 val stopWordRemover = StopWordRemoverFactory(context).create()
 ```
 cara diatas akan menggunakan [kamus stop word bawaan](https://github.com/share424/Android-Sastrawi/raw/master/sastrawi/src/main/assets/stop_words.txt).
 
 Selanjutnya kita bisa menghilangkan stopword dengan method `remove()`, seperti berikut
-```
+```kotlin
 val output = stopWordRemover.remove("Perekonomian Indonesia sedang dalam pertumbuhan yang membanggakan")
 // output = perekonomian indonesia sedang pertumbuhan membanggakan
 ```
 Jika ingin menggunakan kamus stop words sendiri, bisa menggunakan method `fromFile()` untuk dari file dan `fromList()` untuk dari `List<String>`. Contohnya seperti berikut
-```
+```kotlin
 // kamus stop words dari file txt
 // format file dipisah dengan enter tiap katanya
 val file = File("path to file.txt")
