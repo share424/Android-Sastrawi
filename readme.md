@@ -41,7 +41,7 @@ Untuk membuat stemmer bisa menggunakan perintah berikut
 ```
 val stemmer = StemmerFactory(context).create()
 ```
-cara diatas akan menggunakan [kamus kata dasar bawaan](https://github.com/share424/Android-Sastrawi/raw/master/sastrawi/src/main/assets/kata_dasar.txt) dari (kateglo)[http://kateglo.com/]
+cara diatas akan menggunakan [kamus kata dasar bawaan](https://github.com/share424/Android-Sastrawi/raw/master/sastrawi/src/main/assets/kata_dasar.txt) dari [kateglo](http://kateglo.com/)
 
 Selanjutnya kita bisa langsung melakukan stemming dengan method `stem()`, seperti berikut
 ```
