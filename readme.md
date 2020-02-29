@@ -6,6 +6,11 @@
 Android Sastrawi is a Natural Language Processing Toolkit for Bahasa Indonesia. It is port from original <a href="https://github.com/sastrawi/sastrawi">Sastrawi</a> project.
 </p>
 
+<p align="center">
+	<img src="https://github.com/share424/Android-Sastrawi/raw/master/images/stemmer.jpeg" alt="Stemmer" height="400" style="margin-right: 16px" />
+	<img src="https://github.com/share424/Android-Sastrawi/raw/master/images/stop_word.jpeg" alt="Stop Word Remover" height="400" style="margin-left: 16px"/>	
+</p>
+
 
 # Instalasi
 Tambahkan repository jitpack pada file gradle anda
@@ -36,7 +41,7 @@ Untuk membuat stemmer bisa menggunakan perintah berikut
 ```
 val stemmer = StemmerFactory(context).create()
 ```
-cara diatas akan menggunakan [kamus kata dasar bawaan](https://github.com/share424/Android-Sastrawi/raw/master/sastrawi/src/main/assets/kata_dasar.txt) dari (kateglo)[kateglo.com]
+cara diatas akan menggunakan [kamus kata dasar bawaan](https://github.com/share424/Android-Sastrawi/raw/master/sastrawi/src/main/assets/kata_dasar.txt) dari (kateglo)[http://kateglo.com/]
 
 Selanjutnya kita bisa langsung melakukan stemming dengan method `stem()`, seperti berikut
 ```
@@ -58,7 +63,6 @@ val stemmerFromList = StemmerFactory(context)
                             .fromList(list)
                             .create()
 ```
-<img src="https://github.com/share424/Android-Sastrawi/raw/master/images/stemmer.jpeg" alt="Stemmer" height="400" style="text-align:center" />
 
 ## Stop Word Remover
 ### Apa itu Stop Word?
@@ -94,8 +98,6 @@ val stopWordRemoverFromList = StopWordRemoverFactory(context)
                                       .fromList(list)
                                       .create()
 ```
-<img src="https://github.com/share424/Android-Sastrawi/raw/master/images/stop_word.jpeg" alt="Stop Word remover" height="400" style="text-align:center" />
-
 
 # Pustaka
 ## Algoritma
