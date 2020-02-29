@@ -11,15 +11,15 @@ Android Sastrawi is a Natural Language Processing Toolkit for Bahasa Indonesia. 
 Tambahkan repository jitpack pada file gradle anda
 ```
 allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
+	}
 }
 ```
 Selanjutnya tambahkan depedency
 ```
-implementation 'com.github.share424:Android-Sastrawi:Tag'
+implementation 'com.github.share424:Android-Sastrawi:1.0.0'
 ```
 # Fitur
 ## Stemming
