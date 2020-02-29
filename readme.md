@@ -58,6 +58,7 @@ val stemmerFromList = StemmerFactory(context)
                             .fromList(list)
                             .create()
 ```
+![Stemmer](https://github.com/share424/Android-Sastrawi/raw/master/images/stemmer.jpeg)
 ## Stop Word Remover
 ### Apa itu Stop Word?
 [Stop Words](https://en.wikipedia.org/wiki/Stop_words) adalah kumpulan kata yang akan dihilangkan sebelum dilakukan proses NLP.
@@ -92,6 +93,7 @@ val stopWordRemoverFromList = StopWordRemoverFactory(context)
                                       .fromList(list)
                                       .create()
 ```
+![Stop Word Remover](https://github.com/share424/Android-Sastrawi/raw/master/images/stop_word.jpeg)
 # Pustaka
 ## Algoritma
 Algoritma yang digunakan pada library ini adalah hak intelektual masing-masing pemiliknya yang tertera di bawah ini. Lalu untuk meningkatkan kualitas kode, algoritma tersebut diterapkan ke dalam Object Oriented Design.
