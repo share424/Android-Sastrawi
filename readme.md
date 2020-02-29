@@ -95,6 +95,8 @@ val stopWordRemoverFromList = StopWordRemoverFactory(context)
                                       .create()
 ```
 <img src="https://github.com/share424/Android-Sastrawi/raw/master/images/stop_word.jpeg" alt="Stop Word remover" height="400" style="text-align:center" />
+
+
 # Pustaka
 ## Algoritma
 Algoritma yang digunakan pada library ini adalah hak intelektual masing-masing pemiliknya yang tertera di bawah ini. Lalu untuk meningkatkan kualitas kode, algoritma tersebut diterapkan ke dalam Object Oriented Design.
