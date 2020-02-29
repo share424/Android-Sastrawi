@@ -223,12 +223,14 @@ class Context(val originalWord : String, val dictionary : DictionaryInterface, v
             }
         }
 
+        val tempRemovals = removals.toMutableList()
         removals.forEach {
             if(it.affixType == "DP") {
-                removals.remove(it)
+                tempRemovals.remove(it)
             }
         }
-
+        removals.clear()
+        removals.addAll(tempRemovals)
     }
 
     override fun accept(visitor: VisitorInterface) {

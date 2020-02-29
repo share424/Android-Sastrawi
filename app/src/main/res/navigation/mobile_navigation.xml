@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_stemmer">
+
+
+    <fragment
+        android:id="@+id/nav_stemmer"
+        android:name="com.share424.androidsastrawi.ui.stemmer.StemmerFragment"
+        android:label="@string/stemmer"
+        tools:layout="@layout/fragment_stemmer" />
+
+    <fragment
+        android:id="@+id/nav_stop_word_remover"
+        android:name="com.share424.androidsastrawi.ui.stopwordremover.StopWordRemoverFragment"
+        android:label="@string/stop_word_remover"
+        tools:layout="@layout/fragment_stop_word_remover" />
+</navigation>

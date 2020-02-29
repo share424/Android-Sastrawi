@@ -1,30 +1,45 @@
 package com.share424.androidsastrawi
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.share424.sastrawi.Stemmer.StemmerFactory
-import com.share424.sastrawi.StopWordRemover.StopWordRemoverFactory
-import kotlinx.android.synthetic.main.activity_main.*
+import android.view.Menu
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.snackbar.Snackbar
+import com.google.android.material.navigation.NavigationView
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.navigateUp
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var appBarConfiguration: AppBarConfiguration
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
 
-        val stopWordremover = StopWordRemoverFactory(this).createStopWordRemover()
-        val stemmer = StemmerFactory(this).createStemmer()
+        val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
+        val navView: NavigationView = findViewById(R.id.nav_view)
+        val navController = findNavController(R.id.nav_host_fragment)
+        // Passing each menu ID as a set of Ids because each
+        // menu should be considered as top level destinations.
+        appBarConfiguration = AppBarConfiguration(
+            setOf(
+                R.id.nav_stemmer, R.id.nav_stop_word_remover
+            ), drawerLayout
+        )
+        setupActionBarWithNavController(navController, appBarConfiguration)
+        navView.setupWithNavController(navController)
+    }
 
-        btn_stem.setOnClickListener {
-            val output = stemmer.stem(txt_input.text.toString())
-            txt_output.setText(output)
-        }
-
-        btn_stop_word.setOnClickListener {
-            val output = stopWordremover.remove(txt_input.text.toString())
-            txt_output.setText(output)
-        }
-
-
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = findNavController(R.id.nav_host_fragment)
+        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 }
